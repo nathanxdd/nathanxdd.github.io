@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Nathan</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	</head>
+	<body>
+		<section class="showcase" onclick="toggleAudio()">
+			<div class="video-container">
+				<video id="background" loop muted autoplay>
+    					<source src="static/background.mp4" type="video/mp4">
+    					Your browser does not support HTML5 video.
+				</video>
+			</div>
+			<div class="content">
+				<div class="social">
+					<a onclick="copyBTC()"><i class="fab fa-btc fa-5x"></i></a>
+					<a href="https://www.youtube.com/channel/UCCmSWOh-wi81ExzZTUOkpuw" target="_blank"><i class="fab fa-youtube fa-5x"></i></a>
+					<a href="https://t.me/niggersinparis_1" target="_blank"><i class="fab fa-telegram fa-5x"></i></a>
+					<a onclick="copyDiscord()"><i class="fab fa-discord fa-5x"></i></a>
+					<a href="https://open.spotify.com/playlist/7KYsqgf1fMATwods4iX0zT?si=a1c51d84012a4969" target="_blank"><i class="fab fa-spotify fa-5x"></i></a>
+				</div>
+			</div>
+		</section>
+	</body>
+
+	<script>
+		var audio = document.getElementById("background")
+		
+		function toggleAudio() {
+			audio.muted = !audio.muted;
+		}
+
+		function copyBTC() {
+			var text = "bc1q23xnk08yt3masl75tz0jr6t0xcs2h7uqsma9tl"
+			
+			navigator.clipboard.writeText(text);
+			alert("Bitcoin Address Copied!");
+		}
+
+		function copyDiscord() {
+			var text = "married to fashion#3149"
+			
+			navigator.clipboard.writeText(text);
+			alert("Discord ID Copied!");
+		}
+	</script>
+</html>
